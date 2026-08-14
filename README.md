@@ -1,5 +1,7 @@
 # creator-sourcing
 
+By: Mike Futia / SCALE AI -> https://www.skool.com/scale-ai/about
+
 A Claude Code skill that turns a niche into a ranked, contactable creator list plus
 a self-contained dashboard.
 
