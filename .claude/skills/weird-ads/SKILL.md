@@ -22,6 +22,8 @@ Read `references/characters.md` for the saved cast (element IDs, looks, voices) 
 
 ## Hard rules (user corrections — never break)
 
+0. **Beat order: squint/"wait… wait…" at the screen FIRST, then shock, then dance.**
+
 1. **Reaction, not explanation.** The character gasps, squints, panics, celebrates.
    At most a couple of shouted words. Do not have them read entry/exit/stop rules.
 2. **Pronunciation.** PZEN is said **"Pulse Zen"**. Always write spoken lines
@@ -56,13 +58,15 @@ Beat sheet (adapt per character, keep the arc):
 
 | Time | Character (top) | Board (bottom) |
 |---|---|---|
-| 0–2.5 s | exaggerated shock — hands on face, gasp | all RSIs tick down, rows red |
-| 2.5–5 s | nose to the monitor, squinting, "wait… wait…" | hero row RSI → ~30, `ENTRY ZONE` chip flashes amber |
+| 0–2.5 s | nose to the monitor, squinting at the screen, "wait… wait…" | all RSIs tick down, rows red |
+| 2.5–5 s | exaggerated shock — hands on face, gasp | hero row RSI → ~30, `ENTRY ZONE` chip flashes amber |
 | 5–11.5 s | dorky victory dance, shouts the coin name, ends pointing at camera | big green `✓ SETUP TRIGGERED` alert pops and glows |
 
 ## Pipeline
 
-1. **Frames (Nano Banana 2, 1:1, 2k).** One frame per beat: shock, lean-in, dance.
+1. **Frames (Nano Banana 2, 1:1, 2k).** One frame per beat, **in this order**:
+   (1) lean-in squinting at the screen ("wait… wait…"), (2) shock, (3) dance.
+   The squint-at-the-screen beat is ALWAYS the first clip (user correction).
    Reference the character with `<<<element_id>>>` in the prompt and restate the look
    (hair, glasses, suit) every time. Office setting, cool fluorescent light, candid
    phone-video realism, "No text". If one fails, fold its beat into a neighbour

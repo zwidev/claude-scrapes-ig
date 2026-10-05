@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Compose a weird-ads split-screen reaction clip inside the Higgsfield sandbox.
 # Usage: compose.sh c1.mp4 c2.mp4 c3.mp4 board.mp4 out.mp4 ["BANNER TEXT"]
-#   c1/c2/c3: 1:1 Kling reaction clips (shock 3s, lean-in 3s, dance 7s, sound on)
+#   c1/c2/c3: 1:1 Kling reaction clips IN ORDER: lean-in squint "wait… wait…" (3s), shock (3s), dance (7s); sound on
 #   board.mp4: 1080x880 recorded signal board (11.5 s)
 set -euo pipefail
 C1=$1; C2=$2; C3=$3; BOARD=$4; OUT=$5; BANNER=${6:-"AGENT 18 · ALPHA — LINK IN BIO"}
