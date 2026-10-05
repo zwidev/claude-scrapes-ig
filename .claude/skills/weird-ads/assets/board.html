@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/* Agent 18 signal board — 1080x880, 11.6 s timeline. Edit CONFIG below. */
+html,body{margin:0;width:1080px;height:880px;background:#07090b;overflow:hidden;font-family:"DejaVu Sans",sans-serif;color:#e8ecef}
+.top{display:flex;justify-content:space-between;align-items:center;padding:26px 40px 10px}
+.brand{font-weight:bold;font-size:34px}.brand span{color:#2ee6a6}.live{color:#ff5a5a;font-weight:bold;font-size:26px}
+.row{margin:14px 40px;padding:22px 28px;border:2px solid #1f252b;border-radius:18px;background:#0e1215;display:flex;justify-content:space-between;align-items:center;transition:all .25s}
+.nm{font-size:32px;font-weight:bold}.sub{font-size:22px;color:#8a949c;margin-top:6px}
+.rsi{font-family:"DejaVu Sans Mono",monospace;font-size:46px;font-weight:bold;text-align:right}
+.chip{display:inline-block;margin-top:8px;font-size:20px;font-weight:bold;padding:4px 12px;border-radius:8px;background:#10343a;color:#7fe3f0}
+.red .rsi{color:#ff5a5a}.red{border-color:#5a1f24;background:#160c0e}
+.amber{border-color:#e0b43a;box-shadow:0 0 24px rgba(224,180,58,.45)}.amber .chip{background:#5a4510;color:#ffd866}
+.alert{position:absolute;left:40px;right:40px;top:300px;padding:36px;border-radius:22px;background:#06291e;border:4px solid #2ee6a6;box-shadow:0 0 60px rgba(46,230,166,.6);text-align:center;opacity:0;transform:scale(.8);transition:all .35s cubic-bezier(.2,1.6,.4,1)}
+.alert.on{opacity:1;transform:scale(1)}.alert h1{margin:0;font-size:58px;color:#2ee6a6}.alert p{margin:14px 0 0;font-size:28px;color:#d6fff0}
+.flash{animation:f .5s ease-in-out infinite alternate}@keyframes f{to{box-shadow:0 0 90px rgba(46,230,166,.95)}}
+.foot{position:absolute;bottom:18px;width:100%;text-align:center;color:#59636b;font-size:20px}
+</style></head><body>
+<div class="top"><div class="brand" id="brand"></div><div class="live">● LIVE</div></div>
+<div id="rows"></div>
+<div class="alert" id="al"><h1>✓ SETUP TRIGGERED</h1><p id="alp"></p></div>
+<div class="foot">Educational demo · Not financial advice</div>
+<script>
+// ---- CONFIG -------------------------------------------------------------
+const CONFIG = {
+  brand: 'ZenCore <span>Alpha</span> · Agent 18',
+  hero: 0,                       // index of the row that triggers
+  alert: 'PZEN RSI Mean Reversion<br>RSI(14) &lt; 30 · near 30-day support',
+  rows: [ // name, sub, rsi start, rsi after drop
+    ['PZEN RSI Mean Reversion','PZEN/PLS · 1d · Long',42,35],
+    ['PLS RSI Mean Reversion','PLS/PLS · 1d · Long',38,33.5],
+    ['HEX RSI Mean Reversion','HEX/PLS · 1d · Long',40,35],
+  ],
+};
+// ------------------------------------------------------------------------
+document.getElementById('brand').innerHTML=CONFIG.brand;document.getElementById('alp').innerHTML=CONFIG.alert;
+const R=document.getElementById('rows');
+CONFIG.rows.forEach((r,i)=>{R.insertAdjacentHTML('beforeend',`<div class="row" id="r${i}"><div><div class="nm">${r[0]}</div><div class="sub">${r[1]}</div><div class="chip" id="c${i}">MONITOR</div></div><div class="rsi">RSI <span id="v${i}">${r[2].toFixed(1)}</span></div></div>`)});
+const t0=performance.now();const now=()=>(performance.now()-t0)/1000;
+const lerp=(a,b,x)=>a+(b-a)*Math.max(0,Math.min(1,x));const H=CONFIG.hero;
+function tick(){const t=now();const j=()=>(Math.random()-.5)*0.6;
+ CONFIG.rows.forEach((r,i)=>{let v;
+  if(i===H) v=t<2.5?lerp(r[2],r[3],t/2.5):t<5?lerp(r[3],30.4,(t-2.5)/2.5):29.6+Math.sin(t*3)*0.15;
+  else v=t<2.5?lerp(r[2],r[3],t/2.5):lerp(r[3],r[3]-0.8,(t-2.5)/6);
+  document.getElementById('v'+i).textContent=(v+((i!==H||t<5)?j():0)).toFixed(1);
+  document.getElementById('r'+i).classList.toggle('red',t>0.4&&!(i===H&&t>=2.5));});
+ document.getElementById('r'+H).classList.toggle('amber',t>=2.5&&t<5&&Math.floor(t*4)%2==0);
+ document.getElementById('c'+H).textContent=t>=5?'SETUP TRIGGERED':t>=2.5?'ENTRY ZONE':'MONITOR';
+ if(t>=5){const a=document.getElementById('al');a.classList.add('on');if(t>5.4)a.classList.add('flash');}
+ if(t<11.6)requestAnimationFrame(tick);else window.__done=true;}
+tick();
+</script></body></html>
