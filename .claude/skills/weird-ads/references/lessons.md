@@ -66,6 +66,11 @@
   courtside, the background behind the phone shows the court and the players
   (correct count, one each side of the net). Restate wardrobe details visible in
   POV (sleeveless = bare forearms) or the model invents sleeves.
+- **Spatial logic of the set.** If the fence is behind her seat, the court she
+  looks at is in FRONT of her: POV shots show NO fence/mesh in the foreground,
+  only the far-end fence beyond the far player. Prompt "nothing between the
+  viewer and the court". Make the second POV by editing the first (swap only the
+  screen) so both inserts match and the player count stays at two.
 - **Kling ambience can contain stray voices** ("oh my god"). Whisper every clip
   with sound; replace with a clean bed (e.g. the rally clip's own audio, skipping
   segments already used elsewhere so a grunt doesn't repeat).

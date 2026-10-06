@@ -29,6 +29,8 @@ Use the element id inside prompts as `<<<id>>>`. Refer to characters by name wit
 - Sylvie tennis v5 (fluid walk-to-sit, rally sound under the entry, court + both
   players visible behind the phone) — 2026-10-06,
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/03716e93-cb57-4ec6-b76b-79bd68b7d252.mp4`
+- Sylvie tennis v6 (phone POV: open court in front, fence only at the far end) — 2026-10-06,
+  `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/6386ca24-2d92-4ed9-bb8b-135e168fe445.mp4`
 - Percival → HEX RSI Mean Reversion (shouts "HEX!")
 - Rupert → PLS EMA Trend Follow (avoid saying "PLS" — shout "Pulse Chain!" if needed)
 - Cyril → PLS RSI Mean Reversion
@@ -67,3 +69,4 @@ stop 2% below entry. Do not display paper-replay results.
 | iPhone POV at the fence — PZEN chart / golden orb (Kling 3 s, both clean full length) | `ec76b7c7-f6e7-4573-aace-e35e542b8875` / `3559f506-7350-4dda-b4a5-4e52ad22ba09` | "matte screen with no reflections" in the frame prompt fixed the ghosting |
 | Walk-to-sit v5 — starts IN FRONT of the chair, half-turned (frame `388974cd-9564-4685-bd12-954dc9a1f4bb`) → end anchor `12646a99` | job `00672909-ec48-412a-9999-f80d2c52f8d8` | Fluid, no overshoot. Own audio has a stray voice — replace with rally bed |
 | iPhone POV through the fence with the court + 2 players rallying behind — PZEN chart / golden orb (Kling 3 s) | `62c6db7d-b571-46e4-8112-6b81f060684b` / `12ba4c28-1be7-4c17-bf0c-4081d43bee9f` (frames `259450ae-…`, `18d9f622-…`) | Bare forearms (sleeveless dress) |
+| iPhone POV from her courtside seat — open court in front, fence only at far end, 2 players rallying — PZEN chart / golden orb (Kling 3 s) | `8a0f751c-c425-4b3d-9a56-048066b73ce0` / `2d921f65-4fd8-4f49-bf34-4c2ef126f4e9` (frames `8b2fc429-…`, orb edited from chart frame `35960d32-…`) | Current best phone inserts for the tennis set |
