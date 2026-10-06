@@ -44,6 +44,13 @@
 - **Character scrolling / clicking.** User wants the character to LOOK, not
   operate the computer. Prompt "does not touch the mouse or keyboard". Clicking
   happens only on the board below (animated cursor).
+- **Extra people in a sports shot** (v2 tennis serve had three men, two on one
+  side). Prompt "Only these TWO players are on the court for the entire clip — one
+  on each side of the net, no other people appear on the court", and check a
+  1-fps strip for anyone appearing mid-clip.
+- **Ghost reflection creeping onto a phone screen** in Kling POV clips after ~1 s.
+  Strip the clip at 5 fps cropped to the screen; use only the clean part
+  (boomerang it: forward, reverse, forward) rather than letting it play out.
 - **Phone status bar baked into the frame** (Nano Banana sometimes adds
   "80% 🔋"). Add "full frame, no phone interface or status bar"; crop more if it
   survives.

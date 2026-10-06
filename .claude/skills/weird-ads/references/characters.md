@@ -20,6 +20,9 @@ Use the element id inside prompts as `<<<id>>>`. Refer to characters by name wit
   user fixes: no extra arm, Agent 18 on his monitor, he only looks) — 2026-10-06,
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/68e66b83-1641-4ac5-b0b2-50e79a00f47b.mp4`
   (the Cyril v1 of the same clip was rejected for an extra arm and a game on screen)
+- Sylvie → "keep fit / Pulse Zen" tennis clip, v3 country club (2 players only,
+  racquet, phone shows PZEN chart then golden orb) — 2026-10-06,
+  `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/179163d3-3772-49c4-9099-b6a30e06a556.mp4`
 - Percival → HEX RSI Mean Reversion (shouts "HEX!")
 - Rupert → PLS EMA Trend Follow (avoid saying "PLS" — shout "Pulse Chain!" if needed)
 - Cyril → PLS RSI Mean Reversion
@@ -48,3 +51,7 @@ stop 2% below entry. Do not display paper-replay results.
 | iPhone close-up ON A TENNIS COURT — Sylvie's yellow gloves, gold iPhone, golden-orb Pulse Zen screen (3 s, Kling, no audio) | job `508ac26e-56aa-42fc-aaeb-b68df649b2a4` (frame `f4666f7e-56f9-4d1b-abaf-d7ea9e682481`) | https://d8j0ntlcm91z4.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/hf_20261006_212905_508ac26e-56aa-42fc-aaeb-b68df649b2a4.mp4 |
 | iPhone close-up ON A TENNIS COURT — same gloves/phone, PZEN chart screen (3 s) | job `25fdc789-4f41-49c6-920c-3881eebd6fe5` (frame `6c03aaf7-7336-438a-9380-ef31b4b7a022`) | https://d8j0ntlcm91z4.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/hf_20261006_212905_25fdc789-4f41-49c6-920c-3881eebd6fe5.mp4 |
 | Phone-screen reference stills (to put the same screens in any new setting) | golden orb `85be5cd9-b722-4542-a78a-a98bd9cfab31`, PZEN chart `96390b6a-5347-4fe7-98ea-aeab0541666c` | Pass as `image_references` + "the phone screen shows EXACTLY the screen in the reference"; new background via a second reference. (Video background-remover inverted the matte on this POV clip — don't rely on it.) |
+| Sylvie COUNTRY-CLUB tennis frames (Nano Banana 2; ivory pleated dress, visor, racquet) | anchor seated to camera w/ racquet `52abf718-264f-4695-a5d2-2807943fe997`, walk-in w/ racquet `6e19a2c5-badc-4cd8-8818-7d35523c9a6e`, glance `24e7084a-c29f-49e6-8ee4-04fe6fd7be3d`, phone `228a7b2f-4cd9-4ac0-bfd4-9edaaee58551`, look-up `03890bbe-7e9b-427e-b8ae-592b2d9f7c95`, two shirtless players `afc1eec0-8fe2-4bae-94b2-88abad939e3a` | Edit new beats from the anchor with "keep everything identical" |
+| iPhone POV close-up AT THE COUNTRY CLUB — PZEN chart (Kling 3 s) | job `59710cb9-92d5-46b1-82f2-64befbd1d17c` (frame `b328e0f0-0f00-4b2d-ba02-a399836cbc2c`) | Only the first ~0.9 s is clean — a ghost reflection appears on the screen after ~1 s; boomerang that segment |
+| iPhone POV close-up AT THE COUNTRY CLUB — golden orb (Kling 3 s) | job `82cf1689-3f27-424c-86cc-095c6beef93d` (frame `9fbedd18-1fd7-4664-8dfc-75e0fc93d154`) | Clean for the full clip |
+| Two-player serve, country-club grass court (Kling 5 s, grunt) | job `aaac8ffa-fff1-4b9e-8105-a6af735cec4e` | Exactly two players, one per side (v2 had a third man) |
