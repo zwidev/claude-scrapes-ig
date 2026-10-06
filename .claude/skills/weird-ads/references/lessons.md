@@ -57,6 +57,18 @@
 - **Jump cut from walking to already seated.** Make the entry ONE Kling clip:
   start frame = character walking toward the EMPTY chair (same framing as the
   seated anchor), `end_image` = the seated anchor. She is seen sitting down.
+- **Walk-to-sit overshoot.** With the character starting beside/behind the chair
+  line, Kling walks her PAST the chair and back (with or without `end_image`).
+  Fix: start frame with her already stepping in FRONT of the chair (between chair
+  and camera), body half-turned to camera, one step from the seat; `end_image` =
+  seated anchor. 5 s.
+- **POV phone shots must show what she is looking at.** If the story says she's
+  courtside, the background behind the phone shows the court and the players
+  (correct count, one each side of the net). Restate wardrobe details visible in
+  POV (sleeveless = bare forearms) or the model invents sleeves.
+- **Kling ambience can contain stray voices** ("oh my god"). Whisper every clip
+  with sound; replace with a clean bed (e.g. the rally clip's own audio, skipping
+  segments already used elsewhere so a grunt doesn't repeat).
 - **Noisy entry ambience.** Prompt "quiet ambience only… no crowd chatter" and
   duck the clip (volume 0.3) under the following dialogue.
 - **Real-world set dressing.** Tennis courts have a tall dark-green chain-link

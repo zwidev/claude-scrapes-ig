@@ -26,6 +26,9 @@ Use the element id inside prompts as `<<<id>>>`. Refer to characters by name wit
 - Sylvie tennis v4 (chain-link fence, walk-into-sit in one shot, forehand return only,
   quiet entry, no smiles — eyebrow raise only) — 2026-10-06,
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/27e49d4c-b813-448f-8f50-38d5ed39dcad.mp4`
+- Sylvie tennis v5 (fluid walk-to-sit, rally sound under the entry, court + both
+  players visible behind the phone) — 2026-10-06,
+  `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/03716e93-cb57-4ec6-b76b-79bd68b7d252.mp4`
 - Percival → HEX RSI Mean Reversion (shouts "HEX!")
 - Rupert → PLS EMA Trend Follow (avoid saying "PLS" — shout "Pulse Chain!" if needed)
 - Cyril → PLS RSI Mean Reversion
@@ -62,3 +65,5 @@ stop 2% below entry. Do not display paper-replay results.
 | Walk-in → sit down, one continuous shot (Kling start `8e5826aa` / end anchor `12646a99`) | job `86424f08-b77c-4a36-98ba-df084eac62c2` | Near-silent ambience |
 | Forehand return, two players, chain-link fence (Kling 5 s) | job `2c024b76-1f20-4543-84f8-f3088639ecd6` | Use 0–2.6 s only (clean hit + grunt at 0.93 s) |
 | iPhone POV at the fence — PZEN chart / golden orb (Kling 3 s, both clean full length) | `ec76b7c7-f6e7-4573-aace-e35e542b8875` / `3559f506-7350-4dda-b4a5-4e52ad22ba09` | "matte screen with no reflections" in the frame prompt fixed the ghosting |
+| Walk-to-sit v5 — starts IN FRONT of the chair, half-turned (frame `388974cd-9564-4685-bd12-954dc9a1f4bb`) → end anchor `12646a99` | job `00672909-ec48-412a-9999-f80d2c52f8d8` | Fluid, no overshoot. Own audio has a stray voice — replace with rally bed |
+| iPhone POV through the fence with the court + 2 players rallying behind — PZEN chart / golden orb (Kling 3 s) | `62c6db7d-b571-46e4-8112-6b81f060684b` / `12ba4c28-1be7-4c17-bf0c-4081d43bee9f` (frames `259450ae-…`, `18d9f622-…`) | Bare forearms (sleeveless dress) |
