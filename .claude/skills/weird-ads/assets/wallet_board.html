@@ -1,0 +1,50 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/* Agent 18 wallet-follow board — 1080x880 bottom half for the narrator-explainer variant. Edit CUES and W (rows). */
+html,body{margin:0;width:1080px;height:880px;background:#07090b;overflow:hidden;font-family:"DejaVu Sans",sans-serif;color:#e8ecef}
+.top{display:flex;justify-content:space-between;align-items:center;padding:24px 40px 6px}
+.brand{font-weight:bold;font-size:34px}.brand span{color:#22d3ee}.live{color:#ff5a5a;font-weight:bold;font-size:26px}
+.panel{margin:10px 40px;border:2px solid #1f252b;border-radius:18px;background:#0e1215;padding:18px 24px}
+.ttl{font-size:30px;font-weight:bold}.sub{font-size:20px;color:#8a949c;margin-top:4px}
+.row{display:flex;align-items:center;justify-content:space-between;padding:14px 4px;border-top:1px solid #1a2026;opacity:0;transform:translateX(-30px);transition:all .35s}
+.row.on{opacity:1;transform:none}
+.rk{font-size:26px;font-weight:bold;color:#a78bfa;width:70px}.who{flex:1}.lbl{font-size:26px;font-weight:bold}.adr{font-family:"DejaVu Sans Mono",monospace;font-size:19px;color:#6b7680}
+.btn{font-size:22px;font-weight:bold;padding:10px 22px;border-radius:10px;border:2px solid rgba(34,211,238,.4);background:rgba(34,211,238,.1);color:#67e8f9;transition:all .2s}
+.btn.done{border-color:#3f3f46;background:#18181b;color:#d4d4d8}
+.btn.press{transform:scale(.88)}
+.hl{box-shadow:0 0 0 3px #22d3ee,0 0 30px rgba(34,211,238,.6)}
+#cur{position:absolute;width:34px;height:34px;left:1100px;top:500px;transition:left .8s ease,top .8s ease;z-index:9}
+.toast{position:absolute;left:40px;right:40px;top:96px;padding:22px 26px;border-radius:16px;background:#0b2530;border:3px solid #22d3ee;box-shadow:0 0 50px rgba(34,211,238,.55);opacity:0;transform:translateY(-40px);transition:all .4s cubic-bezier(.2,1.5,.4,1);display:flex;gap:18px;align-items:center;z-index:5}
+.toast.on{opacity:1;transform:none}.bell{width:56px;height:56px;border-radius:50%;background:#22d3ee;color:#07090b;font-size:40px;font-weight:bold;display:flex;align-items:center;justify-content:center}.toast h2{margin:0;font-size:32px}.toast p{margin:6px 0 0;font-size:22px;color:#a5f3fc}
+.buy{color:#34d399;background:rgba(16,185,129,.15);padding:2px 10px;border-radius:6px}
+.call{position:absolute;left:40px;right:40px;top:470px;padding:28px;border-radius:22px;background:#140f24;border:4px solid #a78bfa;box-shadow:0 0 60px rgba(167,139,250,.55);text-align:center;opacity:0;transform:scale(.8);transition:all .35s cubic-bezier(.2,1.6,.4,1);z-index:6}
+.call.on{opacity:1;transform:scale(1)}.call h1{margin:0;font-size:60px;color:#c4b5fd}.call p{margin:10px 0 0;font-size:26px;color:#ddd6fe}
+.foot{position:absolute;bottom:122px;width:100%;text-align:center;color:#59636b;font-size:19px}
+.risk{position:absolute;bottom:0;left:0;right:0;height:116px;background:#000;color:#e5e7eb;font-size:24px;line-height:1.3;padding:14px 30px;box-sizing:border-box;text-align:center}
+</style></head><body>
+<div class="top"><div class="brand">ZenCore <span>Alpha</span> · Agent 18</div><div class="live">● LIVE</div></div>
+<div class="panel"><div class="ttl">Trader leaderboard</div><div class="sub">PulseChain wallets ranked by 90-day realized profit — follow to get alerts</div>
+<div id="rows"></div></div>
+<div class="toast" id="toast"><div class="bell">!</div><div><h2>Wallet alert · <span class="buy">BUY</span> PZEN</h2><p>Leaderboard #1 · 0x7a3f…e91c · just now</p></div></div>
+<div class="call" id="call"><h1>YOUR CALL.</h1><p>Copy the trade — or don't. Agent 18 just tells you.</p></div>
+<svg id="cur" viewBox="0 0 24 24"><path d="M3 2l16 9-7 2-3 7z" fill="#fff" stroke="#000" stroke-width="1.5"/></svg>
+<div class="foot">Illustrative demo data · Educational demo · Not financial advice</div>
+<div class="risk">Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong.</div>
+<script>
+// CUES = seconds, aligned to VO word timestamps (whisper word_timestamps=True)
+const CUES=window.CUES||{rows:0.3,cursor:4.6,click:6.0,alert:9.9,call:14.9,end:26.2};
+const W=[['#1','Trader','0x7a3f…e91c'],['#2','Trader','0x2c90…41ab'],['#3','Trader','0xd41e…07f3'],['#4','Trader','0x88b2…c5d0']];
+const R=document.getElementById('rows');
+W.forEach((w,i)=>R.insertAdjacentHTML('beforeend',`<div class="row" id="r${i}"><div class="rk">${w[0]}</div><div class="who"><div class="lbl">${w[1]}</div><div class="adr">${w[2]}</div></div><div class="btn" id="b${i}">Follow</div></div>`));
+const t0=performance.now(),now=()=>(performance.now()-t0)/1000,$=id=>document.getElementById(id);
+function tick(){const t=now();
+ W.forEach((w,i)=>$('r'+i).classList.toggle('on',t>=CUES.rows+i*0.35));
+ $('r0').classList.toggle('hl',t>=CUES.cursor&&t<CUES.alert);
+ const b=$('b0').getBoundingClientRect(),c=$('cur');
+ if(t>=CUES.cursor){c.style.left=(b.left+b.width/2)+'px';c.style.top=(b.top+b.height/2)+'px';}
+ $('b0').classList.toggle('press',t>=CUES.click&&t<CUES.click+0.18);
+ if(t>=CUES.click+0.18){$('b0').textContent='Following ✓';$('b0').classList.add('done');}
+ $('toast').classList.toggle('on',t>=CUES.alert);
+ $('call').classList.toggle('on',t>=CUES.call);
+ if(t<CUES.end)requestAnimationFrame(tick);else window.__done=true;}
+tick();
+</script></body></html>

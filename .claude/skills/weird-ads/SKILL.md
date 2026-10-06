@@ -43,6 +43,19 @@ Read `references/characters.md` for the saved cast (element IDs, looks, voices) 
    the audio (MiniMax H3). Don't lay voiceover over a closed mouth.
 7. Don't generate clips "to fit" by stretching — generate enough clips for the beats.
 8. Show the user deliverables as direct download links (cloudfront `.mp4`/`.png`).
+9. **No extra limbs.** Every frame and every clip must show exactly two arms.
+   Keep hands out of frame or pinned somewhere explicit; check a 1-fps contact
+   sheet of each Kling clip before composing (see `references/lessons.md`).
+10. **Monitors show Agent 18, nothing else.** Any on-camera screen displays the
+    Agent 18 board still (passed as `image_references`), static — never a game or
+    invented UI. The character **looks** at the screen; they do not scroll or
+    click. Clicks happen only on the board below.
+11. **Describe features exactly as the app does.** Check the live dashboard
+    before scripting. Agent 18 alerts you when followed wallets buy/sell — it
+    does not copy trades for you. Never inflate chart moves.
+12. **No watermark.** Crypto promos keep the UK risk-warning strip
+    ("Don't invest unless you're prepared to lose all the money you invest…")
+    and remind the user that an FCA-authorised firm must approve before posting.
 
 ## Default format — split-screen reaction (mirrors the user's reference)
 
@@ -64,6 +77,9 @@ Beat sheet (adapt per character, keep the arc):
 
 ## Pipeline
 
+0. **Board still for monitors.** Screenshot the Agent 18 board (Playwright,
+   1600×900) → `media_upload` → PUT in the same sandbox command → `media_confirm`
+   (type image). Reuse its media id for every frame that shows a screen.
 1. **Frames (Nano Banana 2, 1:1, 2k).** One frame per beat, **in this order**:
    (1) lean-in squinting at the screen ("wait… wait…"), (2) shock, (3) dance.
    The squint-at-the-screen beat is ALWAYS the first clip (user correction).
@@ -71,18 +87,28 @@ Beat sheet (adapt per character, keep the arc):
    (hair, glasses, suit) every time. Office setting, cool fluorescent light, candid
    phone-video realism, "No text". If one fails, fold its beat into a neighbour
    (e.g. end the dance clip on the point-at-camera).
-2. **Inspect frames** in the sandbox (`image_paths`) before animating.
+   Every frame prompt includes "exactly two arms"; screen frames add the board
+   still as `image_references` + "the monitor clearly displays the reference
+   image"; squint frames work best chest-up with hands out of frame.
+2. **Inspect frames** in the sandbox (`image_paths`) before animating. Reject any
+   frame where a hand's owner is ambiguous.
 3. **Animate (Kling 3.0, `mode: pro`, `sound: on`, 1:1, `start_image`).** Durations
-   3 s / 3 s / 7 s. Put the shouted words in quotes, phonetic. Add "No music" and
-   "face, hair and outfit stay exactly the same". If the batch returns a preset
-   recommendation ("IN THE DARK"), resubmit that item with `declined_preset_id`.
+   3 s / 3 s / 7 s. Put the shouted words in quotes, phonetic. Add "Static camera",
+   "No music", "Exactly two arms", "the monitor screen content stays exactly the
+   same, static, no scrolling" and "face, hair and outfit stay exactly the same".
+   **Always include `declined_preset_id: "24bae836-2c4a-48e0-89b6-49fcc0b21612"`**
+   — otherwise office/night prompts fail with an "IN THE DARK" preset
+   recommendation and no job is created.
 4. **Board.** Edit `assets/board.html` CONFIG (brand line, rows, hero row, alert
    text) — use the user's real strategy names. Record with Playwright `recordVideo`
    (1080×880), trim the page-load lead-in (`webm_duration − 11.6`), encode 30 fps.
 5. **Compose** with `scripts/compose.sh` (trims 2.5/2.5/6.5 s, concat with audio,
    overlay board, draw banner, loudnorm −14 LUFS).
 6. **Verify**: ffprobe durations; whisper the audio (check the shouted word is
-   pronounced right); contact-sheet frames at 1.2/3.8/6/8/10.8 s.
+   pronounced right); contact-sheet frames at 1.2/3.8/6/8/10.8 s, plus a 1-fps
+   strip of each raw Kling clip (limbs, screen content, status bars).
+   Run steps 4–7 as ONE background sandbox job; if the sandbox resets, `curl -sI`
+   the output URL before redoing anything.
 7. **Deliver**: upload via `media_upload` → PUT in the same sandbox command →
    `media_confirm`; give the user the cloudfront link + a beat table.
 
@@ -91,6 +117,22 @@ Costs (Oct 2026): Nano Banana 2 2k = 2 cr/frame; Kling 3.0 pro sound on ≈ 2 cr
 
 ## Variants
 
+- **Narrator explainer + reaction** (e.g. the Agent 18 wallet-follow clip).
+  Off-screen narrator explains one feature; the character only reacts.
+  1. VO with `seed_audio` (Archie), phonetic, keep its pauses. Whisper with
+     `word_timestamps=True` to get cue times.
+  2. Plan beats to cover the whole take without stretching — e.g. 25.5 s VO →
+     squint 5 s / stare-at-screen 5 s / shock 7 s / dance 12 s Kling clips,
+     trimmed 4.45 / 4.5 / 6.05 / 11.2 s.
+  3. Board: `assets/wallet_board.html` — set `CUES` (rows, cursor, click, alert,
+     call, end) to the VO word times. Shows illustrative leaderboard rows,
+     Follow → "Following ✓", "Wallet alert · BUY", "YOUR CALL.", plus the
+     risk-warning strip and "Illustrative demo data" footer.
+  4. Compose with `scripts/compose_vo.sh` (4 clips + board + VO; character audio
+     ducked to 0.22 under the VO, loudnorm −14 LUFS).
+- **X Article package.** Paste-ready noir/detective copy built only from real
+  app features, ending with the risk warning; cover 1500×600 (5:2) generated at
+  21:9 then cropped. Quote-post it with a one-line hook + the clip.
 - **Talking NPC (lip-synced).** Voice with `seed_audio` preset (Barnaby: `Archie`),
   or clone an accent: render a Kling clip where the character says one line in the
   accent, extract its audio, use it as `audio_references` for `seed_audio`. Lip-sync

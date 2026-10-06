@@ -1,36 +1,77 @@
 # Tool lessons (learned the hard way)
 
+## Errors that STOP generation — and the fix
+
+| Symptom | Cause | Fix (do this up front, not after the failure) |
+|---|---|---|
+| `submission_failed: Preset "IN THE DARK" was recommended instead of submitting a job` | Kling batch auto-suggests a preset for dark/office/night prompts | **Always** pass `declined_preset_id: "24bae836-2c4a-48e0-89b6-49fcc0b21612"` on every Kling 3.0 request. Only the failed item needs resubmitting; the others already have job ids. |
+| MiniMax H3 rejects the request | `start_image` mixed with `audio_references` | Pass the frame as `image_references`; prompt "Recreate the reference image exactly as the opening frame…" |
+| `No such tool` / tool vanished mid-task | Higgsfield MCP disconnected and reconnected | `ToolSearch select:mcp__higsfield__sandbox_exec,...` again and continue. Job ids stay valid — never resubmit a job just because the tool dropped. |
+| Background log/exit file missing, `/home/user/...` empty | Sandbox reset or worker restart killed the job | Before redoing work, `curl -sI <cloudfront url>` of the intended output: if 200, the PUT already happened — just `media_confirm`. Otherwise rerun as ONE self-contained job (download → build → verify → PUT). |
+| `sandbox_exec timed out after 60s` even with `timeout_seconds: 110` | MCP transport caps foreground calls at ~60 s | Foreground commands ≤ 50 s. Never `sleep 100`. To wait on generations use `jobs_wait` (≤15 s per call, repeat); to wait on sandbox work use `background: true` + poll loops of `sleep 5` ×≤11. |
+| PUT returns 400 | Presigned URL is single-use (`if-none-match`) or was already used | Reserve a fresh `media_upload` slot. After a context reset the old URL is gone anyway — reserve a new one. Confirm only after HTTP 200. |
+| OOM-killed during compose / tracking | Whole 1080×1920 video loaded into RAM | Stream frames; keep ffmpeg filtergraphs instead of Python frame arrays. |
+| Local container `curl` to cloudfront / upload.higgsfield.ai → 403 | Proxy blocks those hosts locally | Do every download/upload inside `sandbox_exec`. |
+| `show_medias` schema error | Tool bug | Ask the user for a direct link, or (with consent) push the asset to the public session branch of `zwidev/claude-scrapes-ig`, fetch via `raw.githubusercontent.com/...@<sha>`, then delete it. |
+| User asks to "download to Google Drive" | Drive `create_file` needs base64 in the call; videos are MBs and the sandbox has no Google auth | Not possible for video. Create a Drive folder + a doc of download links instead and tell the user to save the files manually. |
+
+## Visual defects the user has rejected (prevent in the FRAME prompt)
+
+- **Extra arm / third hand.** Kling invents limbs when a hand is near the
+  keyboard/mouse and another is on the body. Fix: frame chest-up with
+  "arms and hands completely out of frame", or pin both hands somewhere explicit
+  ("hands folded in his lap") + "exactly two arms". Inspect frames AND 1-fps
+  contact sheets of every clip before composing.
+- **Random content on the monitor (a scrolling game).** Never let the model
+  invent screen content. Render a still of the Agent 18 board (Playwright
+  screenshot, 1600×900), upload it, pass it to Nano Banana 2 as
+  `image_references` with "the monitor clearly displays the reference image".
+  In Kling add "static camera, the monitor screen content stays exactly the same,
+  static, no scrolling".
+- **Character scrolling / clicking.** User wants the character to LOOK, not
+  operate the computer. Prompt "does not touch the mouse or keyboard". Clicking
+  happens only on the board below (animated cursor).
+- **Phone status bar baked into the frame** (Nano Banana sometimes adds
+  "80% 🔋"). Add "full frame, no phone interface or status bar"; crop more if it
+  survives.
+
 ## Higgsfield MCP
-- Tools drop and reconnect often; reload with ToolSearch `select:...` and continue.
-- `generate_*_batch` → `jobs_wait` (≤15 s per call, keep polling) → inspect.
+
+- `generate_*_batch` → `jobs_wait` (≤15 s per call, keep polling). While a
+  Kling job runs `jobs_wait` may report `type: image` — harmless.
+- `nano_banana_2` executes as `nano_banana_flash`; fine. Media role for
+  references: `image_references` (Kling: `start_image`).
 - Kling 3.0 honours a character only with `start_image` in `medias`.
-- MiniMax H3: `start_image` cannot be mixed with `audio_references` → pass the frame
-  as `image_references`, prompt "Recreate the reference image exactly as the opening
-  frame…". Durations are integers ≥ audio length; trim to the segment afterwards.
-- Video batch may refuse an item with a preset recommendation ("IN THE DARK"):
-  resubmit with `declined_preset_id`.
-- `show_medias` currently errors (schema mismatch) — the user's library uploads can't
-  be listed. Ask for a direct share link, or (with consent) push the asset to the
-  public session branch of `zwidev/claude-scrapes-ig` and fetch
-  `raw.githubusercontent.com/...@<sha>`; delete it afterwards.
-- The local container cannot reach `upload.higgsfield.ai` or cloudfront (proxy 403):
-  do all downloads/uploads inside `sandbox_exec`.
-- `media_upload` presigned URLs are single-use (`if-none-match`): a second PUT returns
-  400 — reserve a fresh slot. Confirm only after HTTP 200.
+- Kling durations 3–15 s; generate the length the beat needs (no stretching).
+- MiniMax H3 durations are integers ≥ audio length; trim afterwards.
 
 ## Sandbox
-- The sandbox resets between turns/worker restarts. Make every producing job
-  self-contained (download inputs → build → verify → PUT) and upload intermediates.
-- Foreground calls time out at ~60 s through MCP: use `background: true` and poll
-  with `sleep` loops of ≤ 50 s.
-- Don't hold a whole 1080×1920 video in RAM (OOM-killed) — stream frames.
-- `magick` isn't installed; use ffmpeg for contact sheets. OpenCV: `pip install
-  opencv-python-headless`.
-- Playwright: `NODE_PATH=$(npm root -g) node rec.js`; recordVideo includes page-load
-  lead-in — trim `duration − timeline_length`.
+
+- Every producing job is self-contained: write HTML/scripts with heredocs,
+  download inputs, build, verify (ffprobe + whisper + contact sheet), PUT, echo
+  `PUT=<code>` and `DONE_OK`.
+- Command limit 16 000 chars incl. the signed URL (~2.5 k) — keep inline HTML lean.
+- `magick` isn't installed; use ffmpeg for contact sheets/crops. OpenCV:
+  `pip install opencv-python-headless`.
+- Playwright: `NODE_PATH=$(npm root -g) node rec.js`; recordVideo includes the
+  page-load lead-in — trim `-ss (duration − timeline − 0.3)`.
 - Fonts: `/usr/share/fonts/truetype/higgsfield/Montserrat-ExtraBold.ttf`.
+- 5:2 covers (X Articles): generate 21:9, then `scale=1500:-2,crop=1500:600`.
 
 ## Voice
-- seed_audio honours pauses ("…") literally — takes run long. Do NOT trim silences;
-  split at silences (`silencedetect=n=-40dB:d=0.4`) into ≤15 s segments instead.
-- Write brand names phonetically ("Pulse Zen"); whisper-check after.
+
+- seed_audio honours pauses ("…") literally — takes run long. Do NOT trim
+  silences; split at silences (`silencedetect=n=-40dB:d=0.4`) into ≤15 s
+  segments for lip-sync, or time the visuals to the take for voiceover.
+- Write brand names phonetically ("Pulse Zen", "Agent Eighteen"); whisper-check.
+  Whisper hears a shouted "HEX!" as "Hacks" — re-check by ear or re-take.
+
+## Accuracy (claims about the user's product)
+
+- Read the live app before scripting a feature. Agent 18 (app.zencore.solutions,
+  dashboard JS bundle) has: Trader leaderboard (wallets ranked by 90-day realized
+  profit), Follow wallet → buy/sell **alerts**, Smart-money feed ("your choice to
+  copy"), Discovered smart wallets, Money flow. It does **not** auto-copy trades —
+  never say it does.
+- Never restate a chart move as a bigger/faster claim (e.g. "+14.58% across ~6
+  4h candles" ≠ "15% in four hours").

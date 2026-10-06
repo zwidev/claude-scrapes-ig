@@ -16,6 +16,10 @@ Use the element id inside prompts as `<<<id>>>`. Refer to characters by name wit
 
 - Barnaby → PZEN RSI Mean Reversion (shouts "Pulse Zen!") — done 2026-10-05,
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/503eece8-62d2-4f45-9252-72166fd9cf0f.mp4`
+- Barnaby → Agent 18 wallet-follow explainer (narrator VO, Barnaby reacts; v2 after
+  user fixes: no extra arm, Agent 18 on his monitor, he only looks) — 2026-10-06,
+  `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/68e66b83-1641-4ac5-b0b2-50e79a00f47b.mp4`
+  (the Cyril v1 of the same clip was rejected for an extra arm and a game on screen)
 - Percival → HEX RSI Mean Reversion (shouts "HEX!")
 - Rupert → PLS EMA Trend Follow (avoid saying "PLS" — shout "Pulse Chain!" if needed)
 - Cyril → PLS RSI Mean Reversion
@@ -29,3 +33,11 @@ From the user's dashboard screenshot (app.zencore.solutions, 2026-10-05):
 - HEX RSI Mean Reversion · HEX/PLS · 1d · Long
 Rules (mean reversion): entry RSI(14) < 30 near 30-day support; exit RSI(14) > 65 or +6%;
 stop 2% below entry. Do not display paper-replay results.
+
+## Reusable media
+
+| What | Media / job id | Notes |
+|---|---|---|
+| Agent 18 board still (1600×900) for on-camera monitors | `f34574ce-b12f-468d-8b87-6eb837816be2` | Pass as `image_references`; leaderboard + wallet alerts |
+| Wallet-follow narrator VO (Archie, 25.5 s) | job `f6f75391-7223-4a4f-ae33-f89a34455ae6` | "Agent Eighteen finds the PulseChain wallets that are actually winning…" |
+| Barnaby noir detective covers (1500×600) | `88ed5925-…` (magnifier), `7d352ec1-…` (stakeout) | X Article covers |
