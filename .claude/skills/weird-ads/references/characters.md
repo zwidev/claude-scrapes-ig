@@ -41,3 +41,7 @@ stop 2% below entry. Do not display paper-replay results.
 | Agent 18 board still (1600×900) for on-camera monitors | `f34574ce-b12f-468d-8b87-6eb837816be2` | Pass as `image_references`; leaderboard + wallet alerts |
 | Wallet-follow narrator VO (Archie, 25.5 s) | job `f6f75391-7223-4a4f-ae33-f89a34455ae6` | "Agent Eighteen finds the PulseChain wallets that are actually winning…" |
 | Barnaby noir detective covers (1500×600) | `88ed5925-…` (magnifier), `7d352ec1-…` (stakeout) | X Article covers |
+| iPhone POV insert — gold phone in Sylvie's yellow gloves, golden-orb Pulse Zen graphic (1.77 s, no audio; Paris street blurred behind) | `6d892e47-8d4b-4bdf-8d4d-c30a00d687c4` | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/6d892e47-8d4b-4bdf-8d4d-c30a00d687c4.mp4 — cut-in whenever a character "checks Pulse Zen" |
+| iPhone held up by Sylvie with the PZEN chart on screen (8.37 s, no audio; Champs-Élysées background) | `0331d051-7148-45b2-924e-ce485ed9d411` | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/0331d051-7148-45b2-924e-ce485ed9d411.mp4 |
+| Sylvie voice lines (cloned accent) — tennis clip | `64c82c1d…` keep-fit, `a66c9fa1…` investing, `183d79dd…` Agent 18 | seed_audio jobs, 2026-10-06 |
+| Sylvie tennis-court frames (same court/outfit) | to-camera `397c9b9a…`, glance `290b8337…`, phone `2bdf85fe…`, look-up `a8de4bcb…`, walk-in `26d08424…`, shirtless players `3078e607…` | Nano Banana 2 jobs |
