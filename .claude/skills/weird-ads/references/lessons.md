@@ -28,6 +28,13 @@
   `image_references` with "the monitor clearly displays the reference image".
   In Kling add "static camera, the monitor screen content stays exactly the same,
   static, no scrolling".
+- **Gaze drifting off the screen** — applies only when the clip narrative has a
+  computer screen (Barnaby stared past the camera from ~6 s and
+  turned to camera in the shock beat). Frame: "camera beside and slightly behind
+  the monitor at a 45-degree angle, BOTH his face (three-quarter) AND the monitor
+  screen clearly visible, eyes locked on the screen, NOT looking at the camera".
+  Kling: "keeps his eyes locked on the screen the entire time; he never looks at
+  the camera". Never prompt "turns to camera" before the dance.
 - **Character scrolling / clicking.** User wants the character to LOOK, not
   operate the computer. Prompt "does not touch the mouse or keyboard". Clicking
   happens only on the board below (animated cursor).

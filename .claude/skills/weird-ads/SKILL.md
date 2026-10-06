@@ -50,6 +50,12 @@ Read `references/characters.md` for the saved cast (element IDs, looks, voices) 
     Agent 18 board still (passed as `image_references`), static — never a game or
     invented UI. The character **looks** at the screen; they do not scroll or
     click. Clicks happen only on the board below.
+    **Gaze (only when the narrative includes a computer screen):** from the
+    squint until the dance, the character's eyes stay on the monitor and BOTH
+    the face and the screen are in shot (camera beside the monitor at ~45°, face
+    three-quarter). No glancing past or into the camera until the dance. Clips
+    without a screen in the story (e.g. walking, phone, talking to camera) don't
+    need this.
 11. **Describe features exactly as the app does.** Check the live dashboard
     before scripting. Agent 18 alerts you when followed wallets buy/sell — it
     does not copy trades for you. Never inflate chart moves.
