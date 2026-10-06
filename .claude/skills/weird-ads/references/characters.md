@@ -23,6 +23,9 @@ Use the element id inside prompts as `<<<id>>>`. Refer to characters by name wit
 - Sylvie → "keep fit / Pulse Zen" tennis clip, v3 country club (2 players only,
   racquet, phone shows PZEN chart then golden orb) — 2026-10-06,
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/179163d3-3772-49c4-9099-b6a30e06a556.mp4`
+- Sylvie tennis v4 (chain-link fence, walk-into-sit in one shot, forehand return only,
+  quiet entry, no smiles — eyebrow raise only) — 2026-10-06,
+  `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/27e49d4c-b813-448f-8f50-38d5ed39dcad.mp4`
 - Percival → HEX RSI Mean Reversion (shouts "HEX!")
 - Rupert → PLS EMA Trend Follow (avoid saying "PLS" — shout "Pulse Chain!" if needed)
 - Cyril → PLS RSI Mean Reversion
@@ -55,3 +58,7 @@ stop 2% below entry. Do not display paper-replay results.
 | iPhone POV close-up AT THE COUNTRY CLUB — PZEN chart (Kling 3 s) | job `59710cb9-92d5-46b1-82f2-64befbd1d17c` (frame `b328e0f0-0f00-4b2d-ba02-a399836cbc2c`) | Only the first ~0.9 s is clean — a ghost reflection appears on the screen after ~1 s; boomerang that segment |
 | iPhone POV close-up AT THE COUNTRY CLUB — golden orb (Kling 3 s) | job `82cf1689-3f27-424c-86cc-095c6beef93d` (frame `9fbedd18-1fd7-4664-8dfc-75e0fc93d154`) | Clean for the full clip |
 | Two-player serve, country-club grass court (Kling 5 s, grunt) | job `aaac8ffa-fff1-4b9e-8105-a6af735cec4e` | Exactly two players, one per side (v2 had a third man) |
+| Sylvie tennis v4 frames (chain-link fence behind, neutral face) | anchor `12646a99-69ff-4baa-9d16-eccdc3d8e890`, walk-in to empty chair `8e5826aa-145c-426d-af39-13954acee244`, glance `5502602e-…`, phone `1055ac8f-…`, look-up `b6d34d19-…`, POV chart `b35abbbe-…`, POV orb `ad917d98-…`, rally inside fence `8db89be5-8a81-4ead-b90a-c62dfcd04b54` | Full ids in session notes |
+| Walk-in → sit down, one continuous shot (Kling start `8e5826aa` / end anchor `12646a99`) | job `86424f08-b77c-4a36-98ba-df084eac62c2` | Near-silent ambience |
+| Forehand return, two players, chain-link fence (Kling 5 s) | job `2c024b76-1f20-4543-84f8-f3088639ecd6` | Use 0–2.6 s only (clean hit + grunt at 0.93 s) |
+| iPhone POV at the fence — PZEN chart / golden orb (Kling 3 s, both clean full length) | `ec76b7c7-f6e7-4573-aace-e35e542b8875` / `3559f506-7350-4dda-b4a5-4e52ad22ba09` | "matte screen with no reflections" in the frame prompt fixed the ghosting |

@@ -51,6 +51,18 @@
 - **Ghost reflection creeping onto a phone screen** in Kling POV clips after ~1 s.
   Strip the clip at 5 fps cropped to the screen; use only the clean part
   (boomerang it: forward, reverse, forward) rather than letting it play out.
+- **Bad sports physics** (player tossed the ball, CAUGHT it, then hit it). For
+  rallies, start the frame mid-rally with the ball incoming and prompt "NO serve,
+  no ball toss, he never catches the ball"; keep only the clean hit window.
+- **Jump cut from walking to already seated.** Make the entry ONE Kling clip:
+  start frame = character walking toward the EMPTY chair (same framing as the
+  seated anchor), `end_image` = the seated anchor. She is seen sitting down.
+- **Noisy entry ambience.** Prompt "quiet ambience only… no crowd chatter" and
+  duck the clip (volume 0.3) under the following dialogue.
+- **Real-world set dressing.** Tennis courts have a tall dark-green chain-link
+  fence; put it in every court frame (and behind courtside seats).
+- **Unwanted smiling.** Deadpan characters: frame "lips closed, no smile"; lip-sync
+  prompt "she NEVER smiles; she only raises one eyebrow on '<word>'".
 - **Phone status bar baked into the frame** (Nano Banana sometimes adds
   "80% 🔋"). Add "full frame, no phone interface or status bar"; crop more if it
   survives.
