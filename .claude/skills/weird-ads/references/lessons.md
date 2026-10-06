@@ -35,6 +35,12 @@
   screen clearly visible, eyes locked on the screen, NOT looking at the camera".
   Kling: "keeps his eyes locked on the screen the entire time; he never looks at
   the camera". Never prompt "turns to camera" before the dance.
+- **Gaze shot that looks like a still photo.** Using the same frame as Kling
+  `start_image` AND `end_image` + "almost motionless" locks the gaze but the user
+  saw a frozen picture. Fix: generate a second frame (same angle, character has
+  leaned closer, mouth open "whoa", still in profile on the screen) and use it as
+  `end_image`. Kling then animates real motion between two on-screen poses
+  without turning to camera. Check with a 2-fps strip that the pose changes.
 - **Character scrolling / clicking.** User wants the character to LOOK, not
   operate the computer. Prompt "does not touch the mouse or keyboard". Clicking
   happens only on the board below (animated cursor).
