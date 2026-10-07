@@ -4,6 +4,21 @@ Standing instructions for every new Sylvie video. These apply to standalone
 Sylvie ads such as the ZenCore marketplace spot, *not* the weird-ads skill
 format, unless the user asks for that.
 
+## Subject: ZenCore
+Every Sylvie video promotes **ZenCore**:
+- **The marketplace:** https://zencore.solutions/marketplace
+- **What it offers:** personal AI agents, each deployed to a private server the
+  customer owns.
+- **The agents:** the OS1 voice assistant, research and analysis agents, coding
+  agents, and the other agents listed there.
+- **The angles:** they remember you, they work while you sleep, and you own them
+  rather than rent them.
+- **Tagline:** "Your AI. Always On. Always Yours."
+
+Re-read the live site before each batch of scripts. Script only the agents and
+features it actually lists (check "Available" vs. "In review"). Keep the ZenCore
+AI Beta disclaimer on the end card.
+
 ## Rule #1 — Win the first 5 seconds
 - Never open with "welcome back to the channel" or any warm-up.
 - Open with **conflict, a shocking stat, an unexpected outcome, or the biggest
