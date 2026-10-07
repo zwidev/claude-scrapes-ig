@@ -28,13 +28,15 @@ AI Beta disclaimer on the end card.
 - *Example that worked:* "I fired my assistant… He forgot me. Every morning."
 
 ## Rule #2 — Batch relentlessly
-Don't make one video from start to finish each day. Work in batches:
+Don't make one video from start to finish at a time. **Each batch is 3 complete
+videos**, produced together stage by stage:
 
-| Day | Work |
-|---|---|
-| Day 1 | 10 scripts from Claude: hook, beats, VO lines, title and thumbnail options for each |
-| Day 2 | Voiceovers and visuals for all 10: Sylvie's cloned voice, frames, clips |
-| Days 3–4 | Edit and schedule: captions, denoise, end cards, upload, posting calendar |
+1. **Scripts.** Write all 3: hook, beats, VO lines, plus title and thumbnail
+   options for each.
+2. **Voice and visuals.** All voice lines for the 3 in one audio batch, then all
+   frames in one image batch, then all clips and lip-syncs in one video batch.
+3. **Edit and deliver.** Compose all 3 (denoise, captions, end card), upload,
+   and hand over each video with its YouTube title, description and tags.
 
 Batching kills the wasted time between tasks. Reuse saved assets (anchor frames,
 the apartment set, voices, end card) across the batch.
