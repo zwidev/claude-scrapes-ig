@@ -126,4 +126,4 @@ Record each batch here: what was posted, then its CTR and retention once known.
 ### OS1 ad "One Conversation" (2026-10-08)
 | Version | Length | Video |
 |---|---|---|
-| Sylvie (Take 3 voice) + OS1 (HERLIVE voice, real OS1 screen) | 75.3 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/75a65a6b-7019-4f1a-954c-838ded9c27b3.mp4) |
+| Sylvie (Take 3 voice) + OS1 (HERLIVE voice, real OS1 screen) | 75.3 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/b7b7c80b-c0d2-47f0-9477-d96f927262e3.mp4) |
