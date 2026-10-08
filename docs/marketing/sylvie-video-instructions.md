@@ -56,11 +56,25 @@ how it performed so the next batch builds on the winners.
 
 ## Craft rules learned on previous Sylvie videos
 - Sylvie is deadpan. **She never smiles**; at most she raises one eyebrow.
-- **Clean audio.** Run every voice line through
-  `highpass=f=80,afftdn=nr=30:nf=-38:tn=1,agate=threshold=0.02:ratio=4:attack=5:release=120`.
-  Her cloned voice carries a hiss at about −34 dB. Don't lay generated room
-  tone under dialogue. Whisper-check every generated clip's audio for stray
-  voices before using it.
+- **Sylvie's voice (approved 2026-10-08). Use it for every line she speaks.**
+  - **Model and settings:** Higgsfield `seed_audio`, `speech_rate: -10` (her
+    slow, deadpan pace), `sample_rate: 48000`.
+  - **Reference:** `medias: [{role: "audio_references", value:
+    "2a5bc262-3c91-4348-a2c1-90f0c5d5699f"}]`.
+  - **Where the reference comes from:** Kling clip `c080cc21`, "Take 3". It
+    was recorded in her silent apartment with a studio-microphone prompt:
+    "Don't let that be you, darling. Most people simply scroll past beautiful
+    things. I do not."
+  - **No processing:** don't apply noise removal, EQ or gates. Her lines come
+    out with silences between −76 and −91 dB. Only loudness-normalise in the
+    final mix.
+  - **Retired reference:** `4025ba42`. It was cut from the original 4 Oct Kling
+    clip `feeed90c`, which had Paris street ambience baked in. Every line
+    cloned from it carried that noise.
+  - **Rejected alternatives:** ElevenLabs stock voices, and the cleaned-up
+    composite reference `60bfcf43`.
+- **Clean mix.** Don't lay generated room tone or ambience under dialogue.
+  Whisper-check every generated clip's audio for stray voices before using it.
 - **Gaze follows the story.** When something on a screen is talking or being
   read (chatbot, phone, laptop), she looks at the screen, not the camera. Prompt
   "keeps her eyes fixed on the screen the ENTIRE time — never looks at the
@@ -86,6 +100,7 @@ Record each batch here: what was posted, then its CTR and retention once known.
 | 3 | My AI Assistants Talk About Me Behind My Back | Linked standalone agents | 52.1 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/1aca56f0-7bbf-442a-9c27-b584bf6dd5f0.mp4) | _tbd_ |
 
 **Batch 1 production notes:**
+- Voice: batch 1 used the retired noisy reference `4025ba42`. Use the approved Take 3 voice (see Craft rules) from batch 2 onward.
 - Lip-syncs: MiniMax H3, duration about the audio length + 1 s. A line under 4 s gets silence padded onto the end.
 - Inserts: Kling 3.0 pro with sound off. Voices are laid on in the edit.
 - Marketplace insert: a live Playwright scroll at 540×960, scaled ×2, to the card the video sells.
