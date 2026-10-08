@@ -74,3 +74,18 @@ how it performed so the next batch builds on the winners.
 - **YouTube copy for each video:** a curiosity-gap title, a description with a
   comment-prompt question, 3–5 hashtags including #Shorts, and comma-separated
   tags under 500 characters.
+
+## Batch log
+Record each batch here: what was posted, then its CTR and retention once known.
+
+### Batch 1 (2026-10-08): ZenCore, 3 videos
+| # | Title used | Product focus | Length | Video | CTR / views |
+|---|---|---|---|---|---|
+| 1 | My Phone Remembers More Than My Ex Did 💅 | Agent 03 OS1 Voice Agent | 58.6 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/7b87b903-9cf5-4836-8f3b-e62b272f8adf.mp4) | _tbd_ |
+| 2 | I Had 47 AI Tabs Open. None Knew My Name. | Agent 01 Basic Package | 51.4 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/184541d4-8d0d-474a-bfa2-9fc2d435937e.mp4) | _tbd_ |
+| 3 | My AI Assistants Talk About Me Behind My Back | Linked standalone agents | 52.1 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/1aca56f0-7bbf-442a-9c27-b584bf6dd5f0.mp4) | _tbd_ |
+
+**Batch 1 production notes:**
+- Lip-syncs: MiniMax H3, duration about the audio length + 1 s. A line under 4 s gets silence padded onto the end.
+- Inserts: Kling 3.0 pro with sound off. Voices are laid on in the edit.
+- Marketplace insert: a live Playwright scroll at 540×960, scaled ×2, to the card the video sells.
