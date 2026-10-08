@@ -73,6 +73,24 @@ how it performed so the next batch builds on the winners.
     cloned from it carried that noise.
   - **Rejected alternatives:** ElevenLabs stock voices, and the cleaned-up
     composite reference `60bfcf43`.
+- **OS1's voice and look (approved 2026-10-08).** Whenever OS1 speaks or appears:
+  - **Voice:** the real OS1 voice. That's ElevenLabs voice `JSWO6cw2AyFE324d5kEr`
+    ("Carolyn Scarlett Jo"), from the HERLIVE agent `agent_3101ksb1zwbzfd9a5x3a9qf5ccb6`.
+  - **Voice settings:** generate lines through the ElevenLabs API with model
+    `eleven_v3_conversational`, stability 0.15, similarity 0.8, speed 1.0, and
+    output `mp3_44100_192`.
+  - **API access:** Higgsfield's built-in voices can't use this voice, so call
+    ElevenLabs directly. api.elevenlabs.io is reachable from the Higgsfield
+    sandbox, not from the Claude container. The API key is the owner's. Never
+    commit it or save it to a file.
+  - **Screen:** the real OS1 graphic from
+    `https://zencore.solutions/images/os1-voice-hero.webp`. It's an animated WebP
+    (56 frames, 4.44 s loop): a white ribbon that morphs between an infinity
+    loop and a circle, on coral `#D1684E`.
+  - **Never** use an invented orb or glow. For phone close-ups, build the screen
+    from the WebP frames (keep each frame's own duration, crop to the ribbon,
+    pad to 9:16 with the coral). For wider shots, edit the frame with the
+    graphic as a second image reference.
 - **Clean mix.** Don't lay generated room tone or ambience under dialogue.
   Whisper-check every generated clip's audio for stray voices before using it.
 - **Gaze follows the story.** When something on a screen is talking or being
@@ -104,3 +122,8 @@ Record each batch here: what was posted, then its CTR and retention once known.
 - Lip-syncs: MiniMax H3, duration about the audio length + 1 s. A line under 4 s gets silence padded onto the end.
 - Inserts: Kling 3.0 pro with sound off. Voices are laid on in the edit.
 - Marketplace insert: a live Playwright scroll at 540×960, scaled ×2, to the card the video sells.
+
+### OS1 ad "One Conversation" (2026-10-08)
+| Version | Length | Video |
+|---|---|---|
+| Sylvie (Take 3 voice) + OS1 (HERLIVE voice, real OS1 screen) | 75.3 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/75a65a6b-7019-4f1a-954c-838ded9c27b3.mp4) |
