@@ -99,6 +99,7 @@ how it performed so the next batch builds on the winners.
   camera", and check a 2-fps contact sheet.
 - **Luxury sets, always.** Sylvie is rich: every room needs visible luxury furniture (chandeliers, gilt boiserie, Louis XV velvet chairs, marble, oil paintings, fresh peonies). Never ship a bare room.
 - **Lip-sync the whole way.** Never lay a long Sylvie line over a closed-mouth walking shot. Split lines over ~9 s into several lip-synced shots; cut away only to inserts (screen, marketplace) and resume on a talking shot that's still in sync.
+- **Check every audio file before lip-sync.** Whisper-transcribe each cut or padded line before uploading it, and the clip's own audio after rendering. MiniMax H3 fills silence in a broken audio input with invented words in a stranger's voice.
 - **Spatial logic.** Backgrounds stay consistent with where she is sitting or
   standing; point-of-view shots show what she would actually see.
 - **Accuracy.** Read the product's live site before scripting. Only claim
@@ -128,5 +129,6 @@ Record each batch here: what was posted, then its CTR and retention once known.
 ### OS1 ad "One Conversation" (2026-10-08)
 | Version | Length | Video |
 |---|---|---|
-| v4: luxury Paris apartment sets + every Sylvie line lip-synced (s6 split into 3 talking shots) | 75.9 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/5d546e30-8c57-4f5b-be1a-a64ee5672bf5.mp4) |
+| v5: v4 + fixed voice on "It runs my calendar…" and restored "…private server" line; no caption over end-card button | 75.9 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/f8305bab-b11a-499d-a6ef-7bf7bb38cce0.mp4) |
+| v4 (superseded: wrong voice mid-ad, closing line missing): luxury Paris apartment sets + every Sylvie line lip-synced (s6 split into 3 talking shots) | 75.9 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/5d546e30-8c57-4f5b-be1a-a64ee5672bf5.mp4) |
 | v3 (superseded: bare rooms, lip-sync dropped mid-ad) | 75.3 s | [mp4](https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/b7b7c80b-c0d2-47f0-9477-d96f927262e3.mp4) |
