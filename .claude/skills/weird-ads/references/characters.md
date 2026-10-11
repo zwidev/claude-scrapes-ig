@@ -31,6 +31,13 @@ Use the element id inside prompts as `<<<id>>>`. Refer to characters by name wit
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/03716e93-cb57-4ec6-b76b-79bd68b7d252.mp4`
 - Sylvie tennis v6 (phone POV: open court in front, fence only at the far end) — 2026-10-06,
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/6386ca24-2d92-4ed9-bb8b-135e168fe445.mp4`
+- Barnaby → "The Hedge" (rear-ended on PulseChain, his Ethereum-stickered estate car is
+  untouched; "Pulse Zen on Ethereum… six times cheaper", PZEN $0.0000573 ETH vs $0.000355 PLS
+  on 2026-10-11) — 37.6 s, full-screen 9:16, Archie voice lip-synced (MiniMax H3) —
+  `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/95037bb1-5965-47ca-bfb8-23febe245e28.mp4`
+  (frames: driving `0bb73c4d…`, SUV in mirror `5a34158a…`, crash wide `f051800b…`, exit `99a0eaae…`,
+  shock `7b899af5…`, sticker close-up `4ce3085a…`, talking anchor `e56917b5…`; seed_audio with an
+  ellipsis "..." hallucinated extra words — use commas)
 - Percival → HEX RSI Mean Reversion (shouts "HEX!")
 - Rupert → PLS EMA Trend Follow (avoid saying "PLS" — shout "Pulse Chain!" if needed)
 - Cyril → PLS RSI Mean Reversion
