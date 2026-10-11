@@ -35,6 +35,12 @@ Use the element id inside prompts as `<<<id>>>`. Refer to characters by name wit
   untouched; "Pulse Zen on Ethereum… six times cheaper", PZEN $0.0000573 ETH vs $0.000355 PLS
   on 2026-10-11) — 37.6 s, full-screen 9:16, Archie voice lip-synced (MiniMax H3) —
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/95037bb1-5965-47ca-bfb8-23febe245e28.mp4`
+  **v2 (current, 40.4 s):** `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/4f688bb9-a74d-451f-933d-0363d8904102.mp4`
+  — exterior impact where the SUV visibly crumples (Kling `1bf67092…` from frame `b4a5f9ca…`), both cars
+  facing the same way (aftermath `e40b20bf…`), slow walk to the tailgate (`eb83b9f1…`), side-on talking
+  shot turning to camera (MiniMax `5f5be735…`, frame `c53966c3…`, VO padded 1.6 s). Lesson: image models
+  flip car orientation — anchor every crash frame on one frame with the right geometry and keep the
+  other car out of shots where it can't be placed correctly.
   (frames: driving `0bb73c4d…`, SUV in mirror `5a34158a…`, crash wide `f051800b…`, exit `99a0eaae…`,
   shock `7b899af5…`, sticker close-up `4ce3085a…`, talking anchor `e56917b5…`; seed_audio with an
   ellipsis "..." hallucinated extra words — use commas)
