@@ -35,7 +35,11 @@ Use the element id inside prompts as `<<<id>>>`. Refer to characters by name wit
   untouched; "Pulse Zen on Ethereum… six times cheaper", PZEN $0.0000573 ETH vs $0.000355 PLS
   on 2026-10-11) — 37.6 s, full-screen 9:16, Archie voice lip-synced (MiniMax H3) —
   `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/95037bb1-5965-47ca-bfb8-23febe245e28.mp4`
-  **v2 (current, 40.4 s):** `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/4f688bb9-a74d-451f-933d-0363d8904102.mp4`
+  **v3 (current, 38.2 s):** `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/d2961aca-9965-42d5-9a29-beaca278b510.mp4`
+  — crash shown ONCE, through the rear window, SUV crumpling visibly (Kling `6c1bfbff…` from `5a34158a…`);
+  walk away from camera to the rear with the crumpled SUV behind (Kling `6a241883…` from `8d9eee99…`).
+  User rule: one crash angle only, no exterior replays.
+  **v2 (superseded, 40.4 s):** `https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/4f688bb9-a74d-451f-933d-0363d8904102.mp4`
   — exterior impact where the SUV visibly crumples (Kling `1bf67092…` from frame `b4a5f9ca…`), both cars
   facing the same way (aftermath `e40b20bf…`), slow walk to the tailgate (`eb83b9f1…`), side-on talking
   shot turning to camera (MiniMax `5f5be735…`, frame `c53966c3…`, VO padded 1.6 s). Lesson: image models
