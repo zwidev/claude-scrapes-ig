@@ -1,0 +1,6 @@
+{
+  "name": "agent18-daily",
+  "private": true,
+  "type": "module",
+  "dependencies": { "playwright": "^1.56.0" }
+}

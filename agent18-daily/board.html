@@ -1,0 +1,57 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+/* Agent 18 board (banner + board), 1080x960. Data from card.json via window.DATA; frames via window.render(t). */
+@font-face{font-family:M8;src:url(mont800.woff)}
+html,body{margin:0;width:1080px;height:960px;background:#07090b;overflow:hidden;font-family:"DejaVu Sans",Arial,sans-serif;color:#e8ecef;position:relative}
+.ban{height:80px;background:#000;display:flex;align-items:center;justify-content:center;font-family:M8;font-size:54px;color:#fff}
+.wrap{position:absolute;top:80px;left:0;width:1080px;height:880px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 40px 4px}
+.brand{font-weight:bold;font-size:34px}.brand span{color:#2ee6a6}.live{color:#ff5a5a;font-weight:bold;font-size:26px}
+.date{margin:0 40px;color:#8a949c;font-size:20px}
+.row{margin:12px 40px;padding:18px 28px;border:2px solid #1f252b;border-radius:18px;background:#0e1215;display:flex;justify-content:space-between;align-items:center}
+.nm{font-size:31px;font-weight:bold}.sub{font-size:22px;color:#8a949c;margin-top:6px}
+.rsi{font-family:"DejaVu Sans Mono",monospace;font-size:46px;font-weight:bold;text-align:right}
+.chip{display:inline-block;margin-top:8px;font-size:20px;font-weight:bold;padding:4px 12px;border-radius:8px;background:#10343a;color:#7fe3f0}
+.hot .rsi{color:#ffd866}.amber{border-color:#e0b43a;box-shadow:0 0 24px rgba(224,180,58,.45)}.hot .chip{background:#5a4510;color:#ffd866}
+.alert{position:absolute;left:40px;right:40px;top:240px;padding:34px;border-radius:22px;background:#06291e;border:4px solid #2ee6a6;text-align:center;opacity:0}
+.alert h1{margin:0;font-size:56px;color:#2ee6a6}.alert p{margin:14px 0 0;font-size:28px;color:#d6fff0}
+.risk{position:absolute;bottom:50px;left:30px;right:30px;padding:10px 16px;border:1px solid #3a3f44;border-radius:10px;color:#b9c0c6;font-size:17px;line-height:1.3;text-align:center;background:#0b0d0f}
+.foot{position:absolute;bottom:16px;width:100%;text-align:center;color:#59636b;font-size:18px}
+</style></head><body>
+<div class="ban">AGENT 18 · ALPHA — LINK IN BIO</div>
+<div class="wrap">
+<div class="top"><div class="brand">ZenCore <span>Alpha</span> · Agent 18</div><div class="live">● LIVE</div></div>
+<div class="date" id="date"></div>
+<div id="rows"></div>
+<div class="alert" id="al"><h1 id="alh"></h1><p id="alp"></p></div>
+<div class="risk">Don't invest unless you're prepared to lose all the money you invest. This is a high-risk investment and you should not expect to be protected if something goes wrong.</div>
+<div class="foot">RSI from public PulseX daily data · Educational demo · Not financial advice</div>
+</div>
+<script>
+const D=window.DATA, EXIT=65, ENTRY=30;
+const cards=[...D.cards].sort((a,b)=>(b.name===D.feature)-(a.name===D.feature));
+const H=cards[0];
+const d=new Date(H.date+'T00:00:00Z');
+document.getElementById('date').textContent='Daily close · '+d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'})+' · RSI(14), 1d';
+const R=document.getElementById('rows');
+cards.forEach((c,i)=>R.insertAdjacentHTML('beforeend',`<div class="row" id="r${i}"><div><div class="nm">${c.name}</div><div class="sub">${c.sub}</div><div class="chip" id="c${i}">MONITOR</div></div><div class="rsi">RSI <span id="v${i}">${c.prev.toFixed(1)}</span></div></div>`));
+// Mode decides the honest labels. Values animate from yesterday's real RSI to today's.
+let mode, mid, zone, done, alh, alp;
+if(H.status==='EXIT RULE HIT'){mode='exit';mid=H.prev<EXIT?EXIT+0.4:H.rsi;zone='EXIT ZONE · RSI > 65';done='EXIT RULE HIT';alh='✓ EXIT RULE HIT';alp=`${H.name}<br>RSI(14) ${H.rsi.toFixed(1)} &gt; 65 exit level`;}
+else if(H.status==='SETUP TRIGGERED'){mode='entry';mid=H.prev>ENTRY?ENTRY-0.4:H.rsi;zone='ENTRY ZONE · RSI < 30';done='SETUP TRIGGERED';alh='✓ SETUP TRIGGERED';alp=`${H.name}<br>RSI(14) ${H.rsi.toFixed(1)} &lt; 30 entry level`;}
+else{const toExit=Math.abs(H.rsi-EXIT)<Math.abs(H.rsi-ENTRY);mode='watch';mid=(H.prev+H.rsi)/2;
+ zone=toExit?'APPROACHING EXIT · 65':'APPROACHING ENTRY · 30';done='ON WATCH';alh='👀 ON WATCH';
+ alp=`${H.name}<br>RSI(14) ${H.rsi.toFixed(1)} · ${Math.abs(H.rsi-(toExit?EXIT:ENTRY)).toFixed(1)} from the ${toExit?'65 exit':'30 entry'} level`;}
+document.getElementById('alh').innerHTML=alh;document.getElementById('alp').innerHTML=alp;
+const L=(a,b,x)=>a+(b-a)*Math.max(0,Math.min(1,x));
+function render(t){
+ const v=t<2.5?L(H.prev,(H.prev+mid)/2,t/2.5):t<5?L((H.prev+mid)/2,mid,(t-2.5)/2.5):L(mid,H.rsi,(t-5)/0.6);
+ document.getElementById('v0').textContent=(v+(t<5?Math.sin(t*23.1)*0.2:0)).toFixed(1);
+ cards.slice(1).forEach((c,j)=>{const i=j+1;document.getElementById('v'+i).textContent=(L(c.prev,c.rsi,t/5)+Math.sin(t*17.3+i)*0.1).toFixed(1);
+  document.getElementById('c'+i).textContent=c.status==='MONITOR'?'MONITOR':c.status;});
+ const r0=document.getElementById('r0');r0.classList.toggle('hot',t>=2.5);r0.classList.toggle('amber',t>=2.5&&t<5&&Math.floor(t*4)%2==0);
+ document.getElementById('c0').textContent=t>=5?done:t>=2.5?zone:'MONITOR POSITION';
+ const a=document.getElementById('al'),k=Math.max(0,Math.min(1,(t-5)/0.35));
+ a.style.opacity=k;a.style.transform='scale('+(0.8+0.2*(1-Math.pow(1-k,3)))+')';
+ const g=t>5.4?0.6+0.35*Math.abs(Math.sin((t-5.4)*Math.PI/0.5)):0.6;a.style.boxShadow='0 0 '+(60+86*(g-0.6))+'px rgba(46,230,166,'+g+')';}
+window.render=render;
+</script></body></html>
