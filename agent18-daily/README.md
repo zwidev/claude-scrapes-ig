@@ -10,7 +10,7 @@ adds the daily data + board pipeline.
    playbook card and picks the feature card (a card that hit its rule, else the one nearest a threshold).
    If the same card and status was featured yesterday (see `log.md`) and another card is closer to a
    threshold, feature that one instead so the series doesn't repeat.
-2. **Character**: next in the rotation after the last `log.md` entry:
+2. **Character**: next in the rotation after the last daily `log.md` entry (ignore rows marked `(extra)`):
    Cyril → Barnaby → Percival → Rupert → Cyril … (element ids in the skill's `references/characters.md`).
 3. **Frames** (Nano Banana 2, 1:1, 2k, character via `<<<element_id>>>` in the prompt only, no `element` media role):
    squint at monitor ("wait… wait…", hands out of frame), shock (both palms on cheeks), dance (fists up).
