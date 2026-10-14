@@ -14,6 +14,9 @@ adds the daily data + board pipeline.
    Cyril → Barnaby → Percival → Rupert → Cyril … (element ids in the skill's `references/characters.md`).
 3. **Frames** (Nano Banana 2, 1:1, 2k, character via `<<<element_id>>>` in the prompt only, no `element` media role):
    squint at monitor ("wait… wait…", hands out of frame), shock (both palms on cheeks), dance (fists up).
+   **Squint frame must be SIDE-ON (user rule, 14 Oct):** camera at 90° to the desk, character in profile
+   facing the monitor, and the monitor's screen faces the character (seen obliquely from the side), never the
+   camera. Reject any frame where the screen faces the viewer while the character looks at it from behind.
    Monitor frames pass the Agent 18 board still `f34574ce-b12f-468d-8b87-6eb837816be2` as `image_references`.
    Inspect all three for limbs and screen content.
 4. **Animate** (Kling 3.0 `kling3_0`, `mode: pro`, `sound: on`, 1:1, `start_image`, 3 s / 3 s / 7 s,
