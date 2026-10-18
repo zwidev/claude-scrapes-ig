@@ -46,7 +46,7 @@ const L=(a,b,x)=>a+(b-a)*Math.max(0,Math.min(1,x));
 function render(t){
  const v=t<2.5?L(H.prev,(H.prev+mid)/2,t/2.5):t<5?L((H.prev+mid)/2,mid,(t-2.5)/2.5):L(mid,H.rsi,(t-5)/0.6);
  document.getElementById('v0').textContent=(v+(t<5?Math.sin(t*23.1)*0.2:0)).toFixed(1);
- cards.slice(1).forEach((c,j)=>{const i=j+1;document.getElementById('v'+i).textContent=(L(c.prev,c.rsi,t/5)+Math.sin(t*17.3+i)*0.1).toFixed(1);
+ cards.slice(1).forEach((c,j)=>{const i=j+1;document.getElementById('v'+i).textContent=(L(c.prev,c.rsi,t/5)+(t<5?Math.sin(t*17.3+i)*0.1:0)).toFixed(1);
   document.getElementById('c'+i).textContent=c.status==='MONITOR'?'MONITOR':c.status;});
  const r0=document.getElementById('r0');r0.classList.toggle('hot',t>=2.5);r0.classList.toggle('amber',t>=2.5&&t<5&&Math.floor(t*4)%2==0);
  document.getElementById('c0').textContent=t>=5?done:t>=2.5?zone:'MONITOR POSITION';
