@@ -12,3 +12,4 @@
 | 2026-10-18 | Barnaby Biro | HEX RSI Mean Reversion | 32.2 → 28.3 (17 Oct close) | SETUP TRIGGERED | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/c5822254-0c75-474b-871d-9b81231d23c4.mp4 |
 | 2026-10-19 | Percival Pallor | PZEN RSI Mean Reversion | 76.5 → 77.9 (18 Oct close) | EXIT RULE HIT | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/b76973ba-a1fb-4785-9a94-aef408b83959.mp4 |
 | 2026-10-20 | Rupert Ramekin | HEX RSI Mean Reversion | 27.9 → 31.6 (19 Oct close) | ON WATCH | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/6f28d960-9f07-4bde-9db1-d7a43ff9cd96.mp4 |
+| 2026-10-21 | Cyril Cranium | PZEN RSI Mean Reversion | 79.1 → 78.3 (20 Oct close) | EXIT RULE HIT | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/a78710ee-9a19-4280-b146-905667c38f98.mp4 |
