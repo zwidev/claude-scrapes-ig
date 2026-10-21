@@ -27,6 +27,8 @@ adds the daily data + board pipeline.
 6. **Compose**: `./compose.sh c1.mp4 c2.mp4 c3.mp4 board.mp4 out.mp4`, then whisper-check the shouted name.
 7. **Deliver**: `media_upload` → `curl -X PUT -H "Content-Type: video/mp4" -H "If-None-Match: *" --upload-file out.mp4 <url>`
    → `media_confirm`. Send the cloudfront link, a beat table and a caption. Append a line to `log.md`.
+   **Also deliver a `.mov` (user request, 21 Oct):** `ffmpeg -i out.mp4 -c copy -movflags +faststart -f mov agent18-<date>-<character>-<coin>.mov`
+   (a remux, no quality loss) and send it with `SendUserFile`. Higgsfield only stores `.mp4`, so the cloudfront link stays `.mp4`.
 
 Works locally (Claude Code container: `pip install imageio-ffmpeg` for ffmpeg, Chromium at
 `/opt/pw-browsers/chromium`) or in the Higgsfield sandbox. Board labels follow the data: `EXIT RULE HIT`
