@@ -20,3 +20,4 @@
 | 2026-10-26 | Barnaby Biro | PLS RSI Mean Reversion | 32.3 → 32.0 (25 Oct close) | ON WATCH | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/1a4b454b-2469-4bee-93a8-7b05f0b83672.mp4 |
 | 2026-10-27 | Percival Pallor | PZEN RSI Mean Reversion | 71.0 → 71.6 (26 Oct close) | EXIT RULE HIT | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/1fb91071-e248-453e-bb1d-da167476872b.mp4 |
 | 2026-10-28 | Rupert Ramekin | PLS RSI Mean Reversion | 31.6 → 31.1 (27 Oct close) | ON WATCH | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/fa02b449-f7c3-47c3-9a65-8fecfed447bf.mp4 |
+| 2026-10-29 | Cyril Cranium | PZEN RSI Mean Reversion | 71.6 → 67.2 (28 Oct close) | EXIT RULE HIT | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/38e6e89b-319c-4d3b-8970-7871d102c95c.mp4 |
