@@ -22,3 +22,4 @@
 | 2026-10-28 | Rupert Ramekin | PLS RSI Mean Reversion | 31.6 → 31.1 (27 Oct close) | ON WATCH | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/fa02b449-f7c3-47c3-9a65-8fecfed447bf.mp4 |
 | 2026-10-29 | Cyril Cranium | PZEN RSI Mean Reversion | 71.6 → 67.2 (28 Oct close) | EXIT RULE HIT | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/38e6e89b-319c-4d3b-8970-7871d102c95c.mp4 |
 | 2026-10-30 | Barnaby Biro | PZEN RSI Mean Reversion | 67.2 → 66.3 (29 Oct close) | EXIT RULE HIT | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/3c5f8d9e-d46f-4eea-97c5-3044c422c494.mp4 |
+| 2026-10-31 | Percival Pallor | PZEN RSI Mean Reversion | 66.3 → 77.5 (30 Oct close) | EXIT RULE HIT | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/af8299eb-74e7-4e35-954b-05624f0381b5.mp4 (Higgsfield out of credits: no-repeat rule would have picked PLS on watch; dance clip reused from 27 Oct) |
