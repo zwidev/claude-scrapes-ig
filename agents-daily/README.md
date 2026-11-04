@@ -36,14 +36,16 @@ copy taken from its page.
      - Barnaby `a9cb2773-5481-41e8-a2eb-fd6a9a4ee0fa`
      - Percival `86f5242a-5059-4a6c-b99c-478062576a47`
      - Rupert `95ea4ab9-b160-4411-b8f3-4467b9e83d7d`
-   - The **shock** and **dance** frames don't show a readable screen, so reuse them:
+   - The **shock** and **dance** frames can be reused, but check the shock frame the first time it's used. The old
+     ones were made for Agent 18, and Cyril's showed the Agent 18 (PZEN) board behind him. If a screen is readable,
+     regenerate the frame facing the camera with the monitors off, then update this table:
 
      | Character | Shock | Dance |
      |---|---|---|
-     | Cyril | `1aa5bf6d-68af-47da-9943-9710680b63b9` | `4e0b7d7b-4f58-453a-b841-97bdd1132ff2` |
-     | Barnaby | `a74854d9-8773-430e-b5ff-a2ad7550ef6b` | `15ad1423-77a5-413b-aaff-e96846fac594` |
-     | Percival | `66251bac-09cd-4943-a9fd-8343013d9130` | `92e18039-68dc-4e34-8c19-ac6dc53537cc` |
-     | Rupert | `d10b4b97-66c8-4dd4-bfdf-1cdc4cf5f557` | `8e46b818-0819-42c9-b2e5-5a12c3596800` |
+     | Cyril | `60ff3d83-6467-4173-a02f-4517d069b3d5` (clean, 4 Nov) | `4e0b7d7b-4f58-453a-b841-97bdd1132ff2` |
+     | Barnaby | `a74854d9-8773-430e-b5ff-a2ad7550ef6b` (unchecked) | `15ad1423-77a5-413b-aaff-e96846fac594` |
+     | Percival | `66251bac-09cd-4943-a9fd-8343013d9130` (unchecked) | `92e18039-68dc-4e34-8c19-ac6dc53537cc` |
+     | Rupert | `d10b4b97-66c8-4dd4-bfdf-1cdc4cf5f557` (screen edge-on, OK) | `8e46b818-0819-42c9-b2e5-5a12c3596800` |
 
 4. **Animate** with Kling 3.0:
    - Settings: `kling3_0`, `mode: pro`, `sound: on`, 1:1, `start_image`, `declined_preset_id: 24bae836-2c4a-48e0-89b6-49fcc0b21612`.
