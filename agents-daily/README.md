@@ -43,7 +43,7 @@ copy taken from its page.
      | Character | Shock | Dance |
      |---|---|---|
      | Cyril | `60ff3d83-6467-4173-a02f-4517d069b3d5` (clean, 4 Nov) | `4e0b7d7b-4f58-453a-b841-97bdd1132ff2` |
-     | Barnaby | `a74854d9-8773-430e-b5ff-a2ad7550ef6b` (unchecked) | `15ad1423-77a5-413b-aaff-e96846fac594` |
+     | Barnaby | `57674de6-2054-4927-8f01-4fda43ae419c` (clean, 5 Nov) | `15ad1423-77a5-413b-aaff-e96846fac594` |
      | Percival | `66251bac-09cd-4943-a9fd-8343013d9130` (unchecked) | `92e18039-68dc-4e34-8c19-ac6dc53537cc` |
      | Rupert | `d10b4b97-66c8-4dd4-bfdf-1cdc4cf5f557` (screen edge-on, OK) | `8e46b818-0819-42c9-b2e5-5a12c3596800` |
 
