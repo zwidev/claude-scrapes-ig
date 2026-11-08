@@ -28,14 +28,19 @@ def check(a):
         i = L.index("← Back to marketplace")
     except ValueError:
         return False, "page layout changed (no back link)", ""
-    status, title = L[i + 2], L[i + 3]
+    # The header block has changed layout before (4 Nov: tag, status, title; 8 Nov: status, deploy tag,
+    # "Agent NN", category, name), so search the first few lines instead of fixed offsets.
+    head = L[i + 1:i + 10]
+    status = next((l for l in head if l in ("Available", "In review", "Coming soon", "Sold out", "Unavailable")), "?")
+    title = " ".join(head)
     billing = next((L[j + 1] for j, l in enumerate(L) if l == "Billing"), "")
     joined = " ".join(L)
     if status != "Available":
         return False, f"status is '{status}'", billing
-    if a["name"] not in title or f"Agent {a['num']}" not in title:
-        return False, f"title is '{title}'", billing
-    if a["price"] not in billing:
+    if a["name"] not in title or not re.search(rf"Agent {a['num']}\b", title):
+        return False, f"title not found in header: '{title[:120]}'", billing
+    # Since 8 Nov the site appends a GBP conversion, e.g. "$79 (£59.02)/month"; compare the USD price.
+    if a["price"] not in re.sub(r"\s*\(£[\d.,]+\)", "", billing):
         return False, f"price changed: '{billing}' (expected {a['price']})", billing
     if re.search(r"Hold at least [\d,]+ PZEN|PZEN gate at checkout", joined):
         return False, "page now requires PZEN", billing
