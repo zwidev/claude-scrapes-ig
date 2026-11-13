@@ -52,7 +52,7 @@ copy taken from its page.
    - c1, squint (3 s): he whispers "wait... wait...". The screen stays static and his hands stay out of frame.
    - c2, shock (3 s): palms on cheeks and a loud comic gasp "oh!".
    - c3, dance (7 s): an awkward victory dance while he shouts the agent's `spoken` name exactly twice. At second four
-     he stops dead and points at the camera, deadpan.
+     he stops dead and points at the camera, "deadpan and silent" (without "silent" Kling sometimes adds a third shout).
    - Check a contact sheet of each clip for limbs and screen orientation.
 5. **Panel**: `node frames.mjs agent.json bf` then
    `ffmpeg -framerate 30 -i bf/%04d.jpg -c:v libx264 -pix_fmt yuv420p -crf 16 panel.mp4`.
