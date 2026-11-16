@@ -9,3 +9,4 @@
 | 2026-11-13 | Cyril Cranium | Agent 17 Vault Papers | $79 one-time | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/c69f0016-2aea-45c2-b146-4a3aaa342a45.mp4 |
 | 2026-11-14 | Barnaby Biro | Agent 19 OS1 Web | $15/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/a04c11d0-02ee-403c-9ea3-b6ff29470dc7.mp4 |
 | 2026-11-15 | Percival Pallor | Agent 20 Research Desk | $19/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/d407a91d-d2f0-40e0-aee0-b7b8b7c4ccb0.mp4 |
+| 2026-11-16 | Rupert Ramekin | Agent 21 Decision Desk | $15/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/448cd73e-a8d8-4d47-9ecc-186e76ddd041.mp4 |
