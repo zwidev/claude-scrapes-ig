@@ -42,7 +42,7 @@
       "num": "14",
       "name": "Switchboard",
       "spoken": "Switchboard",
-      "category": "AI phone receptionist",
+      "category": "Virtual receptionist",
       "price": "$79/month",
       "deploy": "Dedicated server",
       "hook": "A missed call is the customer deciding you were closed.",
