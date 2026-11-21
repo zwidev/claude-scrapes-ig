@@ -14,3 +14,4 @@
 | 2026-11-18 | Barnaby Biro | Agent 01 ZenCore Basic Package | $19/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/db095104-7ba7-4a9a-90e9-8f019175dc91.mp4 (rotation 2) |
 | 2026-11-19 | Percival Pallor | Agent 03 OS1 Voice Agent | $19/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/0d6bf83a-ecd3-47c8-9a43-d9a1bfb629eb.mp4 |
 | 2026-11-20 | Rupert Ramekin | Agent 14 Switchboard | $79/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/9f45f24f-7ebd-4475-959e-23611cb13130.mp4 (dance trimmed to two shouts) |
+| 2026-11-21 | Cyril Cranium | Agent 16 Vault Voice | $129 one-time | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/a02df29e-8568-4f05-b38e-05f29ae98cb1.mp4 (three shouts kept as punchline) |
