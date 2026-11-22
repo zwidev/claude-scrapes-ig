@@ -15,3 +15,4 @@
 | 2026-11-19 | Percival Pallor | Agent 03 OS1 Voice Agent | $19/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/0d6bf83a-ecd3-47c8-9a43-d9a1bfb629eb.mp4 |
 | 2026-11-20 | Rupert Ramekin | Agent 14 Switchboard | $79/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/9f45f24f-7ebd-4475-959e-23611cb13130.mp4 (dance trimmed to two shouts) |
 | 2026-11-21 | Cyril Cranium | Agent 16 Vault Voice | $129 one-time | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/a02df29e-8568-4f05-b38e-05f29ae98cb1.mp4 (three shouts kept as punchline) |
+| 2026-11-22 | Barnaby Biro | Agent 17 Vault Papers | $79 one-time | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/2d2d9b71-6465-48c8-8442-a35da4d17546.mp4 |
