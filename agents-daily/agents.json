@@ -114,7 +114,7 @@
       "num": "20",
       "name": "Research Desk",
       "spoken": "Research Desk",
-      "category": "Trading research",
+      "category": "Market Intelligence",
       "price": "$19/month",
       "deploy": "Hosted · no server to run",
       "hook": "An opinion is cheap. A test you approved is a record.",
