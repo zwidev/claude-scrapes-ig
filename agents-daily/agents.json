@@ -132,7 +132,7 @@
       "num": "21",
       "name": "Decision Desk",
       "spoken": "Decision Desk",
-      "category": "Trading process",
+      "category": "Market Intelligence",
       "price": "$15/month",
       "deploy": "Hosted · no server to run",
       "hook": "Confidence is a tone. A veto is a process.",
