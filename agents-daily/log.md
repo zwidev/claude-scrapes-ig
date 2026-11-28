@@ -21,3 +21,4 @@
 | 2026-11-25 | Cyril Cranium | Agent 21 Decision Desk | $15/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/7bbf7001-2d8c-4b12-b74d-4973b1161765.mp4 (squint re-taken once) |
 | 2026-11-26 | Barnaby Biro | Agent 22 Automaton Trader | $149 one-time | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/ba70f5a8-f8d3-4dc5-b088-c8d9991ac52c.mp4 (squint + dance re-taken once; three shouts kept) |
 | 2026-11-27 | Percival Pallor | Agent 01 ZenCore Basic Package | $19/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/662b7acb-0821-4ac7-8a65-0b1c745a55a5.mp4 (rotation 3) |
+| 2026-11-28 | Rupert Ramekin | Agent 03 OS1 Voice Agent | $19/month | https://d2ol7oe51mr4n9.cloudfront.net/user_2zKMA0BhEQMQrmR8OpIagvrvlFP/b5ba690f-de31-4330-af37-dfcef4be9a06.mp4 |
